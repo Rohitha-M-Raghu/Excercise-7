@@ -18,7 +18,7 @@ public class Hacker {
 		
 	}
 	
-	private static Path getFile() throws IOException {
+	private static Path getFilePath() throws IOException {
 		
 		Path filePath = Paths.get("History.txt");
 		
@@ -36,7 +36,7 @@ public class Hacker {
 	}
 	
 	public static void writeHistory(List<String> urlHistory) throws IOException {
-		Path filePath = getFile();
+		Path filePath = getFilePath();
 		
 		try {
 			Files.write(filePath, urlHistory, StandardCharsets.UTF_8);
@@ -47,7 +47,7 @@ public class Hacker {
 	}
 	
 	public static void readHistory(List<String> urlHistory) throws IOException {
-		Path filePath = getFile();
+		Path filePath = getFilePath();
 		List<String> historyData;
 		
 		try {
